@@ -1,8 +1,8 @@
 <?php 
 
-    $stringa = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam asperiores facilis fugit sunt sint possimus ut doloremque consectetur eligendi molestias!";
-    $url = $_GET["parola"];
-    $stringa2 = str_replace($url, "***", $stringa);
+    $stringa = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam asperiores facilis fugit sunt sint possimus ut doloremque consectetur eligendi molestias!"; //paragrafo generato
+    $url = $_GET["parola"];                          //Acquisizione da url della parola bannata
+    $stringa2 = str_ireplace($url, "***", $stringa); //Sostituzione della parola bannata
 
 ?>
 
@@ -16,8 +16,8 @@
 </head>
 <body>
     
-    <h1><?php echo $stringa2 ?></h1>
-    <p>Valle Luca</p>
+    <h1> <?php echo strlen($stringa); ?> </h1> <!-- lunghezza del paragrafo -->
+    <p> <?php echo $stringa2; ?> </p> <!-- praragrafo -->
 
 </body>
 </html>
